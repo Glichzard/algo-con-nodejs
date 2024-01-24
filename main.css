@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.mainComponents {
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #FFF;
+}
+
+.header h1 {
+    padding: 8px 0;
+}
+
+.map-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .5rem 0;
+    flex: 1 1 auto;
+}
+
+.map-nav button {
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#map {
+    transition: .2s ease;
+    height: 500px;
+    width: 100%;
+}
+
+#map.shownHistory {
+    width: calc(100% - 300px);
+}
+
+#historyList {
+    width: 0px;
+    background-color: #efefef;
+    transition: .2s ease;
+    padding: .5rem;
+    flex-wrap: nowrap;
+}
+
+#historyList > div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#historyList.show {
+    width: 300px;
+}
+
+#sites>div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    gap: 0;
+}
+
+#sites div:nth-child(even) {
+    background-color: #DDD;
+}
+
+#sites div:nth-child(odd) {
+    background-color: #efefef;
+}
